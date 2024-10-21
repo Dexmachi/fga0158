@@ -11,10 +11,15 @@ public class Resolucao2 {
 
 	public static void main(String[] args) {
 		//Declaracao de variaveis
-		*** declaracao do scanner
-		*** declaracao da variavel a 
-		*** declaracao da variavel b
-		*** declaraces de uma variavel para cada operação 
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		int soma = a + b;
+		System.out.println("O resultado da soma é " + soma);
+		int sub = a - b;
+		System.out.println("O resultado da subtração é " + sub);
+		int dividido = a / b;
+		System.out.println("O resultado da divisão é " + dividido);
 
 		//inicializacao do scanner
 		**scanner** = new **_____(___)**;
