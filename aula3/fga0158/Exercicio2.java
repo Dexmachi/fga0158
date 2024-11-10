@@ -24,57 +24,71 @@ public class Exercicio2 {
 		 */
 		int qtdeValores;
 		int[] numeros;
+		numeros = new int[qtdeValores];
 		float media; 
-		// ... demais variaveis
-		
-		
-		/*
-		 * Inicio da execucao do algoritmo
-		 */
-		qtdeValores = lerInteiro("Informe o numero de valores a serem lidos");
-		
-		//instanciacao do vetor
+
+		qtdeValores = lerInteiro("Informe o numero de valores a serem lidos"); 
 		numeros = preencherVetor(qtdeValores);
-		
-		//calculo da media
 		media = calcularMedia(numeros);
-		
+		qtdsParImp = qtds(numeros)
+
+		JOptionPane.showInputDialog("a media de seus valores e de " + resposta + ", e tem " + pares + " numeros pares e " + impares + " numeros impares.");
 		
 	}
 
-	/**
-	 * Funcao para calcular a media dos valores do vetor
-	 * @param numeros vetor de numeros inteiros, para o qual será calculada a media
-	 * @return media dos valores do vetor
-	 */
+
+	
+	
 	private static float calcularMedia(int[] numeros) {
-
+		for(int i=0; i<=numeros.length(); i++){
+			int memorie = 0;
+			memorie += vetor[i];
+		}
+		float divindendo = Interger.parseFloat(memorie);
+		float dividindo = Interger.parseFloat(numeros.length());
+		float resposta = dividendo/dividindo;
 		//retorno da media
-		return 0;
+		return resposta;
 	}
 
-	/**
-	 * Metodo que instancia e preenche o vetor com os valores inteiros.
-	 * @param n numero de valores a serem lidos do teclado
-	 * @return vetor preenchido com n valores
-	 */
-	private static int[] preencherVetor(int n) {
-		// instanciacao do vetor com n posicoes
+
+	
+	private static int[] preencherVetor(int qtdeValores) {
+
+		int vetor[];
+		vetor = new int[qtdeValores];
 		
-		// leitura dos n valores a partir do teclado
-		// Aqui você pode reaproveitar uma função já disponível nesse esboco?  
-		
-		// retorno do vetor para a funcao principal
-		return null;
+		for(int i=0; i<qtdeValores; i++){
+			vetor[i] = lerInteiro(i);
+		}
+
+		return vetor;
 	}
 
-	/**
-	 * Funcao que le um valor do teclado e retorna-o como um inteiro
-	 * @param mensagem Mensagem a ser apresentada ao usuário quando a funcao for chamada
-	 * @return valor inteiro lido a partir do teclado
-	 */
+
+	
+	public int[] qtds(int[] numeros)
+	{
+		int pares = 0
+		int impares = 0
+		for(int i=0; i<numeros.length(); i++)
+			{
+				if(numeros[i]%2==0)
+				{
+					pares++;
+				}
+				else
+				{
+					impares++;
+				}
+			}
+	}
+
+
+
+	
 	private static int lerInteiro(String mensagem) {
-		String strNumero = JOptionPane.showInputDialog(mensagem);
+		String strNumero = JOptionPane.showInputDialog("Informe um valor inteiro para v[" + posicao + "]");
 		int numero = Integer.parseInt(strNumero);  //<--- down-casting de String para int
 		return numero;
 	}
